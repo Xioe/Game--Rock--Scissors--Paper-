@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ROCK.PAPER,SCISSORS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                margin: 0;
+                padding: 0%;
+                box-sizing: border-box;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 20px 0px;
+            }
+
+            h3 {
+                margin: 30px 0px;
+            }
+
+            .panel {
+                margin: 20px;
+            }
+
+            .panel-left, 
+            .panel-right {
+                display: inline-block;
+                width: 48%;
+                overflow: hidden;
+                margin: 40px auto 0px;
+                text-align: center;
+            }
+
+            .panel-left p {
+                font-size: 20px;
+            }
+
+            .panel h3 {
+                text-align: center;
+            }
+            h1, h3 {
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            .select {
+                overflow: hidden;
+                text-align: center;
+                margin: 0 auto;
+                max-width: 1000px;
+            }
+             
+            .select img {
+                width: 150px;
+                height: 150px;
+                margin: 20px;
+                display: inline-block;
+            }
+
+            button {
+                display: block;
+                padding: 5px 20px;
+                border: 2px solid black;
+                text-transform: uppercase;
+                background-color: #fff;
+                font-weight: bold;
+                margin: 10px auto;
+                transition: .3s;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: rgb(20, 20, 20);
+                color: #fff;
+            }
+
+            span {
+                font-weight: bold;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <h1>GAME "ROCK, PAPER, SCISSORS"</h1>
+        <div class="select">
+            <h3>What you choose:</h3>
+            <img data-option="rock" src="img/rock.png" alt="rock">
+            <img data-option="paper" class="firs" src="img/paper.png" alt="paper">
+            <img data-option="scissors" src="img/scissors.png" alt="scissors">
+        </div>
+
+        <button class="start">Let's play!</button>
+
+        <div class="panel-left">
+            <h3>Game score</h3>
+            <p>Your choice: <span data-summary="your-choice"></span></p>
+            <p>Computer choice <span data-summary="ai-choice"></span></p>
+            <h2>Who win: <span data-summary="who-win"></span></h2>
+        </div>
+
+        <div class="panel-right">
+            <h3>Current score</h3>
+            <p class="numbers">Number of games: <span>0</span></p>
+            <p class="wins">Wins: <span>0</span></p>
+            <p class="losses">Losses: <span>0</span></p>
+            <p class="draws">Draws: <span>0</span></p>
+        </div>
+        
+        <script src="main.js" async defer></script>
+    </body>
+</html>
